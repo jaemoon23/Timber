@@ -4,16 +4,25 @@
 #include "SFML/Graphics.hpp"
 #include "SFML/Audio.hpp"
 
-
 int main()
 {
- 
+   
     sf::RenderWindow window(sf::VideoMode(1280, 720), "SFML works!");
     sf::CircleShape shape(100.f);
     shape.setFillColor(sf::Color::Green);
 
-    ResourceMgr<sf::Texture>::Instance().Load("graphics/player.png");
-
+    ResourceMgr<sf::Texture>::Instance().Load(
+        {
+            "graphics/player.png" ,
+            "graphics/axe.png" ,
+            "graphics/bee.png" ,
+            "graphics/branch.png" ,
+            "graphics/cloud.png" ,
+            "graphics/log.png" ,
+            "graphics/rip.png" ,
+            "graphics/tree.png"
+        }
+            );
     sf::Sprite sprite;
     sprite.setTexture(ResourceMgr<sf::Texture>::Instance().Get("graphics/player.png"));
     
@@ -49,12 +58,13 @@ int main()
             std::cout << "Key Up: A" << std::endl;
         }
 
-
         //Draw
         window.clear();
+
         
         window.draw(sprite);
-
+        
+        
         window.display();
         
     }
