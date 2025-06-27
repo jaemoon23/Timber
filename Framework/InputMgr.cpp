@@ -1,6 +1,5 @@
 #include "stdafx.h"
 #include "InputMgr.h"
-#include "GameObject.h"
 
 std::list<sf::Keyboard::Key> InputMgr::downKeys;
 std::list<sf::Keyboard::Key> InputMgr::heldKeys;
@@ -20,6 +19,11 @@ void InputMgr::Clear()
 	upKeys.clear();
 	downKeysVec.assign(downKeysVec.size(), 0);
 	upKeysVec.assign(downKeysVec.size(), 0);
+}
+
+void InputMgr::Update(float dt)
+{
+
 }
 
 void InputMgr::UpdateEvent(const sf::Event& ev) 
@@ -53,11 +57,6 @@ void InputMgr::UpdateEvent(const sf::Event& ev)
 		break;		
 	}
 }
-void InputMgr::Update(float dt) 
-{
-
-}
-
 
 bool InputMgr::GetKeyDown(sf::Keyboard::Key key) 
 {

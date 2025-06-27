@@ -1,27 +1,43 @@
 #include "stdafx.h"
-#include "SpriteGO.h"
+#include "SpriteGo.h"
+#include "TextGo.h"
+
 
 
 int main()
 {
-    sf::RenderWindow window(sf::VideoMode(1280, 720), "SFML works!");
-  
+    sf::RenderWindow window(sf::VideoMode(1280, 720), "TIMBER");
+
     TEXTURE_MGR.Load({
-            "graphics/player.png",
-            "graphics/axe.png",
-            "graphics/bee.png",
-            "graphics/branch.png",
-            "graphics/cloud.png",
-            "graphics/log.png",
-            "graphics/rip.png",
-            "graphics/tree.png"
-        });
+        "graphics/player.png",
+        "graphics/axe.png",
+        "graphics/bee.png",
+        "graphics/branch.png",
+        "graphics/cloud.png",
+        "graphics/log.png",
+        "graphics/rip.png",
+        "graphics/tree.png"
+    });
+
+    FONT_MGR.Load(
+        "fonts/KOMIKAP_.ttf"
+    );
 
     SpriteGo spriteGo("graphics/player.png");
     spriteGo.Init();
     spriteGo.Reset();
     spriteGo.SetOrigin(Origins::MC);
     
+    TextGo testText("fonts/KOMIKAP_.ttf");
+    
+    testText.Init();
+    testText.Reset();
+    testText.SetText("hello world");
+    testText.SetOrigin(Origins::MC);
+    testText.SetColor(sf::Color::White);
+
+
+
     while (window.isOpen()) 
     {
         sf::Event event;
@@ -39,18 +55,20 @@ int main()
         }
 
         //Update
-        InputMgr::Update(0.f);
-        spriteGo.Update(0.f);
+        InputMgr::Update(0.0f);
+        spriteGo.Update(0.0f);
 
         //Draw
         window.clear();
 
-        //window.draw(sprite);
         spriteGo.Draw(window);
-        
+        testText.Draw(window);
+
         window.display();
-        
     }
+
+    spriteGo.Release();
+    testText.Release();
 
     return 0;
 }

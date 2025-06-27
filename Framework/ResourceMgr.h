@@ -18,7 +18,6 @@ protected:
 		resources.clear();
 	}
 
-	
 
 	ResourceMgr(const ResourceMgr&) = delete;
 	ResourceMgr* operator=(const ResourceMgr&) = delete;
@@ -86,9 +85,13 @@ public:
 		return *(it->second);
 	}
 };
+
 template<typename T>
 T ResourceMgr<T>::Empty;
+
 
 #define TEXTURE_MGR (ResourceMgr<sf::Texture>::Instance())
 #define FONT_MGR (ResourceMgr<sf::Font>::Instance())
 #define SOUNDBUFFER_MGR (ResourceMgr<sf::SoundBuffer>::Instance())
+
+
