@@ -10,6 +10,7 @@ protected:
 	sf::Vector2f scale;
 	sf::Vector2f origin;
 
+	Origins originPreset;
 	float rotation;
 
 
@@ -32,6 +33,8 @@ public:
 
 	sf::Vector2f GetOrigin() const { return origin; }
 	virtual void SetOrigin(const sf::Vector2f& o){ origin = o; }
+
+	virtual void SetOrigin(Origins preset){ originPreset = preset; }
 
 
 	GameObject(const std::string& name = "");

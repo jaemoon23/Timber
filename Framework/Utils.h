@@ -2,6 +2,6 @@
 class Utils
 {
 public:
-	static void SetOrigin(sf::Sprite& obj, Origins preset);
+	static sf::Vector2f SetOrigin(sf::Sprite& obj, Origins preset);
 };
 

@@ -20,6 +20,7 @@ int main()
     SpriteGo spriteGo("graphics/player.png");
     spriteGo.Init();
     spriteGo.Reset();
+    spriteGo.SetOrigin(Origins::MC);
     
     while (window.isOpen()) 
     {
@@ -44,7 +45,6 @@ int main()
         //Draw
         window.clear();
 
-        
         //window.draw(sprite);
         spriteGo.Draw(window);
         
