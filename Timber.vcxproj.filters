@@ -30,7 +30,7 @@
     <ClCompile Include="stdafx.cpp">
       <Filter>Framework</Filter>
     </ClCompile>
-    <ClCompile Include="SpriteGo.cpp">
+    <ClCompile Include="Framework\SpriteGo.cpp">
       <Filter>소스 파일</Filter>
     </ClCompile>
   </ItemGroup>
@@ -50,7 +50,7 @@
     <ClInclude Include="Framework\Singleton.h">
       <Filter>Framework</Filter>
     </ClInclude>
-    <ClInclude Include="SpriteGo.h">
+    <ClInclude Include="Framework\SpriteGo.h">
       <Filter>헤더 파일</Filter>
     </ClInclude>
   </ItemGroup>

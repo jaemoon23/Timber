@@ -19,19 +19,19 @@ public:
 	void SetName(const std::string& n) { name = n; };
 
 	bool getActive() const { return active; }
-	void setActive(bool a) { active = a; }
+	virtual void setActive(bool a) { active = a; }
 	
 	float GetRotation() const { return rotation; }
-	void SetRotation(float rot) { rotation = rot; }
+	virtual void SetRotation(float rot) { rotation = rot; }
 
 	sf::Vector2f GetPosition() const { return position; }
-	void SetPosition(const sf::Vector2f& pos) { position = pos; }
+	virtual void SetPosition(const sf::Vector2f& pos) { position = pos; }
 
 	sf::Vector2f GetScale() const { return scale; }
-	void SetScale(const sf::Vector2f& s) { position = s; }
+	virtual void SetScale(const sf::Vector2f& s) { position = s; }
 
 	sf::Vector2f GetOrigin() const { return origin; }
-	void SetOrigin(const sf::Vector2f& o){ origin = o; }
+	virtual void SetOrigin(const sf::Vector2f& o){ origin = o; }
 
 
 	GameObject(const std::string& name = "");
