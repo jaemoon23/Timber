@@ -5,7 +5,6 @@ class SpriteGo : public GameObject
 	sf::Sprite sprite;
 	std::string textureId;
 
-
 public:
 
 	SpriteGo(const std::string& texId = "", const std::string& name = "");
@@ -13,7 +12,6 @@ public:
 	
 	const std::string& GetTextureId() const { return textureId; }
 	void SetTextureId(const std::string& texId) { textureId = texId; }
-
 
 	void SetRotation(float rot) override; 
 	void SetPosition(const sf::Vector2f& pos) override;

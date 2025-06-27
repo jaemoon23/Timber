@@ -12,6 +12,8 @@
 #include <SFML/Audio.hpp>
 
 // FRAME WORK
+#include "Defines.h"
+#include "Utils.h"
 #include "Singleton.h"
 #include "ResourceMgr.h"
 #include "InputMgr.h"

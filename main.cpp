@@ -6,11 +6,7 @@ int main()
 {
     sf::RenderWindow window(sf::VideoMode(1280, 720), "SFML works!");
   
-    
-    /*sf::Sprite sprite;*/
-    /*sprite.setTexture(ResourceMgr<sf::Texture>::Instance().Get("graphics/player.png"));*/
-
-    ResourceMgr<sf::Texture>::Instance().Load({
+    TEXTURE_MGR.Load({
             "graphics/player.png",
             "graphics/axe.png",
             "graphics/bee.png",
