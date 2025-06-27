@@ -34,6 +34,8 @@ int main()
     testText.Reset();
     testText.SetText("hello world");
     testText.SetOrigin(Origins::MC);
+    sf::Vector2f vec = { 1280.f * 0.5f, 720.f * 0.5f };
+    testText.SetPosition(vec);
     testText.SetColor(sf::Color::White);
 
 

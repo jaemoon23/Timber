@@ -3,7 +3,7 @@
 
 
 TextGo::TextGo(const std::string& texId, const std::string& name, int size)
-	:GameObject(name), textureId(texId), size(size)
+	:GameObject(name), FontId(texId), size(size)
 {
 }
 
@@ -46,6 +46,7 @@ void TextGo::SetSize(int s)
 {
 	size = s;
 	text.setCharacterSize(size);
+	SetOrigin(originPreset);
 }
 
 void TextGo::SetColor(sf::Color color)
@@ -56,6 +57,7 @@ void TextGo::SetColor(sf::Color color)
 void TextGo::SetText(std::string message)
 {
 	text.setString(message);
+	SetOrigin(originPreset);
 }
 
 
@@ -70,11 +72,8 @@ void TextGo::Release()
 
 void TextGo::Reset()
 {
-	text.setFont(FONT_MGR.Get(textureId)); // 폰트 설정
-
+	text.setFont(FONT_MGR.Get(FontId)); // 폰트 설정
 	Utils::SetOrigin(text, originPreset);
-
-	SetColor(sf::Color::Red);
 	SetSize(size);
 }
 

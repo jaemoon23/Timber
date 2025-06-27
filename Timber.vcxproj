@@ -145,7 +145,7 @@
       <PrecompiledHeader Condition="'$(Configuration)|$(Platform)'=='Debug|x64'">Create</PrecompiledHeader>
     </ClCompile>
     <ClCompile Include="Framework\Utils.cpp" />
-    <ClCompile Include="TextGo.cpp" />
+    <ClCompile Include="Framework\TextGo.cpp" />
   </ItemGroup>
   <ItemGroup>
     <ClInclude Include="Framework\Defines.h" />
@@ -156,7 +156,7 @@
     <ClInclude Include="Framework\SpriteGo.h" />
     <ClInclude Include="stdafx.h" />
     <ClInclude Include="Framework\Utils.h" />
-    <ClInclude Include="TextGo.h" />
+    <ClInclude Include="Framework\TextGo.h" />
   </ItemGroup>
   <Import Project="$(VCTargetsPath)\Microsoft.Cpp.targets" />
   <ImportGroup Label="ExtensionTargets">

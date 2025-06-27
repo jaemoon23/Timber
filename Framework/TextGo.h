@@ -8,7 +8,7 @@ protected:
     sf::Text text;
     int size;
     sf::Color color = color.White;
-    std::string textureId;
+    std::string FontId;
 
 public:
     // GameObject을(를) 통해 상속됨
