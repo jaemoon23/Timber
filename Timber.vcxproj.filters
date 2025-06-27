@@ -13,36 +13,39 @@
       <UniqueIdentifier>{67DA6AB6-F800-4c08-8B7A-83BB121AAD01}</UniqueIdentifier>
       <Extensions>rc;ico;cur;bmp;dlg;rc2;rct;bin;rgs;gif;jpg;jpeg;jpe;resx;tiff;tif;png;wav;mfcribbon-ms</Extensions>
     </Filter>
+    <Filter Include="Framework">
+      <UniqueIdentifier>{99f2a15c-d6af-4b62-881d-04960430983d}</UniqueIdentifier>
+    </Filter>
   </ItemGroup>
   <ItemGroup>
     <ClCompile Include="main.cpp">
       <Filter>소스 파일</Filter>
     </ClCompile>
-    <ClCompile Include="InputMgr.cpp">
-      <Filter>소스 파일</Filter>
+    <ClCompile Include="Framework\GameObject.cpp">
+      <Filter>Framework</Filter>
     </ClCompile>
-    <ClCompile Include="GameObject.cpp">
-      <Filter>소스 파일</Filter>
+    <ClCompile Include="Framework\InputMgr.cpp">
+      <Filter>Framework</Filter>
     </ClCompile>
     <ClCompile Include="stdafx.cpp">
-      <Filter>소스 파일</Filter>
+      <Filter>Framework</Filter>
     </ClCompile>
   </ItemGroup>
   <ItemGroup>
-    <ClInclude Include="InputMgr.h">
-      <Filter>헤더 파일</Filter>
-    </ClInclude>
-    <ClInclude Include="Singleton.h">
-      <Filter>헤더 파일</Filter>
-    </ClInclude>
-    <ClInclude Include="ResourceMgr.h">
-      <Filter>헤더 파일</Filter>
-    </ClInclude>
-    <ClInclude Include="GameObject.h">
-      <Filter>헤더 파일</Filter>
-    </ClInclude>
     <ClInclude Include="stdafx.h">
       <Filter>헤더 파일</Filter>
+    </ClInclude>
+    <ClInclude Include="Framework\GameObject.h">
+      <Filter>Framework</Filter>
+    </ClInclude>
+    <ClInclude Include="Framework\InputMgr.h">
+      <Filter>Framework</Filter>
+    </ClInclude>
+    <ClInclude Include="Framework\ResourceMgr.h">
+      <Filter>Framework</Filter>
+    </ClInclude>
+    <ClInclude Include="Framework\Singleton.h">
+      <Filter>Framework</Filter>
     </ClInclude>
   </ItemGroup>
 </Project>

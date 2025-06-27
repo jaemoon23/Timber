@@ -109,7 +109,7 @@
       <SDLCheck>true</SDLCheck>
       <PreprocessorDefinitions>_DEBUG;_CONSOLE;%(PreprocessorDefinitions)</PreprocessorDefinitions>
       <ConformanceMode>true</ConformanceMode>
-      <AdditionalIncludeDirectories>SFML-2.6.2\include;%(AdditionalIncludeDirectories)</AdditionalIncludeDirectories>
+      <AdditionalIncludeDirectories>.\SFML-2.6.2\include;$(ProjectDir)$(ProjectDir);.\Framework;%(AdditionalIncludeDirectories)</AdditionalIncludeDirectories>
       <PrecompiledHeader>Use</PrecompiledHeader>
     </ClCompile>
     <Link>
@@ -137,18 +137,18 @@
     </Link>
   </ItemDefinitionGroup>
   <ItemGroup>
-    <ClCompile Include="GameObject.cpp" />
-    <ClCompile Include="InputMgr.cpp" />
+    <ClCompile Include="Framework\GameObject.cpp" />
+    <ClCompile Include="Framework\InputMgr.cpp" />
     <ClCompile Include="main.cpp" />
     <ClCompile Include="stdafx.cpp">
       <PrecompiledHeader Condition="'$(Configuration)|$(Platform)'=='Debug|x64'">Create</PrecompiledHeader>
     </ClCompile>
   </ItemGroup>
   <ItemGroup>
-    <ClInclude Include="GameObject.h" />
-    <ClInclude Include="InputMgr.h" />
-    <ClInclude Include="ResourceMgr.h" />
-    <ClInclude Include="Singleton.h" />
+    <ClInclude Include="Framework\GameObject.h" />
+    <ClInclude Include="Framework\InputMgr.h" />
+    <ClInclude Include="Framework\ResourceMgr.h" />
+    <ClInclude Include="Framework\Singleton.h" />
     <ClInclude Include="stdafx.h" />
   </ItemGroup>
   <Import Project="$(VCTargetsPath)\Microsoft.Cpp.targets" />
