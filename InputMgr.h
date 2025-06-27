@@ -1,8 +1,4 @@
 #pragma once
-#include <list>
-#include <vector>
-#include <SFML/Window/Keyboard.hpp>
-#include <SFML/Window/Event.hpp>
 
 class InputMgr
 {

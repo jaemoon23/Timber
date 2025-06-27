@@ -1,8 +1,7 @@
-#include <iostream>
+#include "stdafx.h"
 #include "InputMgr.h"
 #include "ResourceMgr.h"
-#include "SFML/Graphics.hpp"
-#include "SFML/Audio.hpp"
+
 
 int main()
 {
