@@ -16,6 +16,8 @@ public:
 	static void Init();
 	static void Clear();
 
+	
+
 	static void UpdateEvent(const sf::Event& ev);
 	static void Update(float dt);
 

@@ -18,3 +18,5 @@
 #include "Singleton.h"
 #include "ResourceMgr.h"
 #include "InputMgr.h"
+#include "GameObject.h"
+#include "Scene.h"

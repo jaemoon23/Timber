@@ -9,3 +9,10 @@ enum class Origins
 	BL, BC, BR, // 6 7 8
 	Custom		// 9
 };
+
+enum class SceneIds
+{
+	Game,
+	Dev1,
+	Dev2
+};

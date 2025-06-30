@@ -72,7 +72,7 @@ void TextGo::Release()
 
 void TextGo::Reset()
 {
-	text.setFont(FONT_MGR.Get(FontId)); // 폰트 설정
+	text.setFont(FONT_MGR.Get(FontId));    // 폰트 설정
 	Utils::SetOrigin(text, originPreset);
 	SetSize(size);
 }

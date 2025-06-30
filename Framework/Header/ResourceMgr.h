@@ -31,7 +31,7 @@ public:
 	bool Load(const std::string& id)
 	{
 		auto it = resources.find(id); // 다 찾아보는 친구 없으면 end반환
-		if (it != resources.end()) // 값을 찾을수 없을때
+		if (it != resources.end())    // 값을 찾을수 없을때
 		{
 			return false;
 		}

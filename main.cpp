@@ -1,44 +1,29 @@
 #include "stdafx.h"
 #include "SpriteGo.h"
 #include "TextGo.h"
-
-
+#include "SceneGame.h"
 
 int main()
 {
-    sf::RenderWindow window(sf::VideoMode(1280, 720), "TIMBER");
-
-    TEXTURE_MGR.Load({
+    sf::RenderWindow window(sf::VideoMode(1980, 1020), "TIMBER");
+    std::vector<std::string> texIds = {
         "graphics/player.png",
+        "graphics/background.png",
         "graphics/axe.png",
         "graphics/bee.png",
         "graphics/branch.png",
         "graphics/cloud.png",
         "graphics/log.png",
         "graphics/rip.png",
-        "graphics/tree.png"
-    });
+        "graphics/tree.png" 
+    };
 
-    FONT_MGR.Load(
-        "fonts/KOMIKAP_.ttf"
-    );
+    TEXTURE_MGR.Load(texIds);
+    FONT_MGR.Load("fonts/KOMIKAP_.ttf");
 
-    SpriteGo spriteGo("graphics/player.png");
-    spriteGo.Init();
-    spriteGo.Reset();
-    spriteGo.SetOrigin(Origins::MC);
-    
-    TextGo testText("fonts/KOMIKAP_.ttf");
-    
-    testText.Init();
-    testText.Reset();
-    testText.SetText("hello world");
-    testText.SetOrigin(Origins::MC);
-    sf::Vector2f vec = { 1280.f * 0.5f, 720.f * 0.5f };
-    testText.SetPosition(vec);
-    testText.SetColor(sf::Color::White);
-
-
+    SceneGame sceneGame;
+    sceneGame.Init();
+    sceneGame.Enter();
 
     while (window.isOpen()) 
     {
@@ -58,19 +43,14 @@ int main()
 
         //Update
         InputMgr::Update(0.0f);
-        spriteGo.Update(0.0f);
+        sceneGame.Update(0.0f);
 
         //Draw
         window.clear();
-
-        spriteGo.Draw(window);
-        testText.Draw(window);
-
+        sceneGame.Draw(window);
         window.display();
     }
 
-    spriteGo.Release();
-    testText.Release();
-
+    sceneGame.Release();
     return 0;
 }
