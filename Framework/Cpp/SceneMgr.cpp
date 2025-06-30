@@ -13,8 +13,6 @@ void SceneMgr::Init()
 	}
 
 	currentScene = startScene;
-
-	// 최초로 열릴 씬을 열고있다
 	scenes[(int)currentScene]->Enter();
 }
 void SceneMgr::Release()

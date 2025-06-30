@@ -127,7 +127,8 @@
       <SDLCheck>true</SDLCheck>
       <PreprocessorDefinitions>NDEBUG;_CONSOLE;%(PreprocessorDefinitions)</PreprocessorDefinitions>
       <ConformanceMode>true</ConformanceMode>
-      <AdditionalIncludeDirectories>SFML-2.6.2\include;%(AdditionalIncludeDirectories)</AdditionalIncludeDirectories>
+      <AdditionalIncludeDirectories>.\SFML-2.6.2\include;.\Framework\Header;.\Framework\Cpp;$(ProjectDir);%(AdditionalIncludeDirectories)</AdditionalIncludeDirectories>
+      <PrecompiledHeader>Use</PrecompiledHeader>
     </ClCompile>
     <Link>
       <SubSystem>Console</SubSystem>
@@ -137,7 +138,7 @@
     </Link>
   </ItemDefinitionGroup>
   <ItemGroup>
-    <ClCompile Include="Framework.cpp" />
+    <ClCompile Include="Framework\Cpp\Framework.cpp" />
     <ClCompile Include="Framework\Cpp\GameObject.cpp" />
     <ClCompile Include="Framework\Cpp\InputMgr.cpp" />
     <ClCompile Include="main.cpp" />
@@ -149,12 +150,13 @@
     <ClCompile Include="Framework\Cpp\SceneMgr.cpp" />
     <ClCompile Include="stdafx.cpp">
       <PrecompiledHeader Condition="'$(Configuration)|$(Platform)'=='Debug|x64'">Create</PrecompiledHeader>
+      <PrecompiledHeader Condition="'$(Configuration)|$(Platform)'=='Release|x64'">Use</PrecompiledHeader>
     </ClCompile>
     <ClCompile Include="Framework\Cpp\Utils.cpp" />
     <ClCompile Include="Framework\Cpp\TextGo.cpp" />
   </ItemGroup>
   <ItemGroup>
-    <ClInclude Include="Framework.h" />
+    <ClInclude Include="Framework\Header\Framework.h" />
     <ClInclude Include="Framework\Header\Defines.h" />
     <ClInclude Include="Framework\Header\GameObject.h" />
     <ClInclude Include="Framework\Header\InputMgr.h" />

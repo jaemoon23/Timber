@@ -1,9 +1,8 @@
 #include "stdafx.h"
-#include "Framework.h"
 
 int main()
 {
-    FRAMEWORK.Init(1920.f, 1020.f, "TimBer!");
+    FRAMEWORK.Init(1920, 1080, "TimBer!");
     FRAMEWORK.Do();
     FRAMEWORK.Release();
 

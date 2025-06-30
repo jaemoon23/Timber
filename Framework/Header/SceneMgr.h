@@ -11,8 +11,7 @@ protected:
 	std::vector<Scene*> scenes;
 
 	// Ω√¿€ æ¿
-	SceneIds startScene = SceneIds::Dev1;
-
+	SceneIds startScene = SceneIds::Game;
 	// ø≠∑¡¿÷¥¬ æ¿
 	SceneIds currentScene = SceneIds::None;
 

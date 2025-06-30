@@ -9,6 +9,7 @@ SceneDev1::SceneDev1()
 void SceneDev1::Init()
 {
 	fontIds.push_back("fonts/KOMIKAP_.ttf");
+
 	TextGo* go = new TextGo("fonts/KOMIKAP_.ttf");
 	go->SetText("Dev 1");
 	go->SetSize(30);

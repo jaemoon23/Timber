@@ -24,3 +24,4 @@
 #include "TextGo.h"
 #include "SceneGame.h"
 #include "SceneMgr.h"
+#include "Framework.h"

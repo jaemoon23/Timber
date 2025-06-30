@@ -8,11 +8,11 @@ protected:
 	bool active;
 
 	sf::Vector2f position;
-	float rotation;
+	float rotation = 0.f;
 	sf::Vector2f scale;
 	sf::Vector2f origin;
 
-	Origins originPreset;
+	Origins originPreset = Origins::TL;
 
 public:
 	GameObject(const std::string& name = "");
