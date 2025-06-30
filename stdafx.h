@@ -20,3 +20,7 @@
 #include "InputMgr.h"
 #include "GameObject.h"
 #include "Scene.h"
+#include "SpriteGo.h"
+#include "TextGo.h"
+#include "SceneGame.h"
+#include "SceneMgr.h"

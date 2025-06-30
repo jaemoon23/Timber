@@ -4,6 +4,10 @@ class Scene
 protected:
 	std::list<GameObject*> gameObjects;
 
+	std::vector <std::string> texIds;
+	std::vector <std::string> fontIds;
+	std::vector <std::string> soundIds;
+
 public:
 	const SceneIds Id;
 
