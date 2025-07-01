@@ -23,7 +23,7 @@ public:
 	virtual void Update(float dt);
 	virtual void Draw(sf::RenderWindow& window);
 
-	void AddGameObject(GameObject* go);
+	GameObject* AddGameObject(GameObject* go);
 	void RemoveGameObject(GameObject* go);
 
 	GameObject* FindGameObject(const std::string& name);

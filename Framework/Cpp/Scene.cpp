@@ -59,13 +59,14 @@ void Scene::Draw(sf::RenderWindow& window)
     }
 }
 
-void Scene::AddGameObject(GameObject* go)
+GameObject* Scene::AddGameObject(GameObject* go)
 {
     if (std::find(gameObjects.begin(), gameObjects.end(), go) == gameObjects.end())
     {
         gameObjects.push_back(go); // 추가하기
+        return go;
     }
-    
+    return nullptr;
 }
 
 void Scene::RemoveGameObject(GameObject* go)

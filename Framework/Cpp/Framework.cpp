@@ -16,8 +16,11 @@ void Framework::Init(int w, int h, const std::string& t)
 
 void Framework::Do()
 {
+    
+    Utils::Init();
     while (window.isOpen())
     {
+        
         sf::Time dt = clock.restart();
         realDeltaTime = deltaTime = dt.asSeconds();
         deltaTime *= timeScale;
@@ -26,7 +29,7 @@ void Framework::Do()
 
         InputMgr::Clear();
         sf::Event event;
-        
+
         while (window.pollEvent(event))
         {
             if (event.type == sf::Event::Closed)
@@ -35,16 +38,19 @@ void Framework::Do()
             }
 
             InputMgr::UpdateEvent(event);
-        }
-
+        } 
+        
         //Update
         InputMgr::Update(deltaTime);
         SCENE_MGR.Update(deltaTime);
-
-        //Draw
+       
+        //Drawb
         window.clear();
         SCENE_MGR.Draw(window);
         window.display();
+        
+
+       
     }
 }
 

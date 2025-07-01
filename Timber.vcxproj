@@ -138,6 +138,8 @@
     </Link>
   </ItemDefinitionGroup>
   <ItemGroup>
+    <ClCompile Include="Framework\Cpp\Axe.cpp" />
+    <ClCompile Include="Framework\Cpp\BackgroundElement.cpp" />
     <ClCompile Include="Framework\Cpp\Framework.cpp" />
     <ClCompile Include="Framework\Cpp\GameObject.cpp" />
     <ClCompile Include="Framework\Cpp\InputMgr.cpp" />
@@ -148,14 +150,19 @@
     <ClCompile Include="Framework\Cpp\SceneDev1.cpp" />
     <ClCompile Include="Framework\Cpp\SceneDev2.cpp" />
     <ClCompile Include="Framework\Cpp\SceneMgr.cpp" />
+    <ClCompile Include="Framework\Cpp\Player.cpp" />
     <ClCompile Include="stdafx.cpp">
       <PrecompiledHeader Condition="'$(Configuration)|$(Platform)'=='Debug|x64'">Create</PrecompiledHeader>
       <PrecompiledHeader Condition="'$(Configuration)|$(Platform)'=='Release|x64'">Use</PrecompiledHeader>
     </ClCompile>
     <ClCompile Include="Framework\Cpp\Utils.cpp" />
     <ClCompile Include="Framework\Cpp\TextGo.cpp" />
+    <ClCompile Include="Framework\Cpp\Tree.cpp" />
+    <ClCompile Include="UiHub.cpp" />
   </ItemGroup>
   <ItemGroup>
+    <ClInclude Include="Framework\Header\Axe.h" />
+    <ClInclude Include="Framework\Header\BackgroundElement.h" />
     <ClInclude Include="Framework\Header\Framework.h" />
     <ClInclude Include="Framework\Header\Defines.h" />
     <ClInclude Include="Framework\Header\GameObject.h" />
@@ -168,9 +175,12 @@
     <ClInclude Include="Framework\Header\SceneDev1.h" />
     <ClInclude Include="Framework\Header\SceneDev2.h" />
     <ClInclude Include="Framework\Header\SceneMgr.h" />
+    <ClInclude Include="Framework\Header\Player.h" />
     <ClInclude Include="stdafx.h" />
     <ClInclude Include="Framework\Header\Utils.h" />
     <ClInclude Include="Framework\Header\TextGo.h" />
+    <ClInclude Include="Framework\Header\Tree.h" />
+    <ClInclude Include="UiHub.h" />
   </ItemGroup>
   <Import Project="$(VCTargetsPath)\Microsoft.Cpp.targets" />
   <ImportGroup Label="ExtensionTargets">

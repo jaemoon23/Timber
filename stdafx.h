@@ -25,3 +25,4 @@
 #include "SceneGame.h"
 #include "SceneMgr.h"
 #include "Framework.h"
+#include "BackgroundElement.h"

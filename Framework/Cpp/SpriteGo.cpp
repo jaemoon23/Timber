@@ -53,21 +53,12 @@ void SpriteGo::Release()
 void SpriteGo::Reset()
 {
 	sprite.setTexture(TEXTURE_MGR.Get(textureId));
-
 	Utils::SetOrigin(sprite, originPreset);
 }
 
 void SpriteGo::Update(float dt)
 {
-	if (InputMgr::GetKeyDown(sf::Keyboard::Left))
-	{
-		SetPosition({ 0.0f, 0.0f });
-	}
-
-	if (InputMgr::GetKeyDown(sf::Keyboard::Right))
-	{
-		SetPosition({ 500.0f, 500.0f });
-	}
+	
 }
 
 void SpriteGo::Draw(sf::RenderWindow& window)
